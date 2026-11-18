@@ -53,7 +53,7 @@ Du brauchst [Vial](https://get.vial.today/) ab 0.7.5 und einen PC (Windows, macO
    ist der komplette Flash-Inhalt deines Pads, **samt Hersteller-Makros im Klartext** — wie ein
    Passwort aufbewahren (z. B. als Anhang im Passwortmanager). Das ist dein Weg zurück.
 4. **`s9b-first-install.uf2`** aus dem [aktuellen Release](../../releases/latest) laden (optional mit
-   `SHA256SUMS` prüfen) und auf das Laufwerk `YRKB_UPDATE` kopieren.
+   `SHA256SUMS` prüfen; der Build ist [reproduzierbar](docs/BUILDING.de.md)) und auf das Laufwerk `YRKB_UPDATE` kopieren.
 5. Das Pad startet mit der neuen Firmware neu. Die LEDs leuchten grün; Vial zeigt jetzt „S9B“
    mit 8 Ebenen. Ab Werk spielt Taste *n* das Makro `M(n−1)`.
 

@@ -52,7 +52,8 @@ You need [Vial](https://get.vial.today/) 0.7.5 or newer and a PC (Windows, macOS
    complete flash of your pad, **including the vendor macros in plain text** — store it like a
    password (e.g. as an attachment in your password manager). It is your way back.
 4. Download **`s9b-first-install.uf2`** from the [latest release](../../releases/latest)
-   (optionally check it against `SHA256SUMS`) and copy it onto the `YRKB_UPDATE` drive.
+   (optionally check it against `SHA256SUMS`; the build is
+   [reproducible](docs/BUILDING.md)) and copy it onto the `YRKB_UPDATE` drive.
 5. The pad restarts with the new firmware. The LEDs light up green; Vial now shows
    "S9B" with 8 layers. By default key *n* plays macro `M(n−1)`.
 

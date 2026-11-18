@@ -5,8 +5,10 @@
 The firmware is vial-qmk at a pinned commit, plus this repository's keyboard folder and three
 small patches. `scripts/build.sh` applies the patches, copies the keyboard, builds and writes
 the UF2 files. Every release on GitHub is built exactly this way by GitHub Actions
-([`.github/workflows/build.yml`](../.github/workflows/build.yml)), so you can compare your
-build log with the release's.
+([`.github/workflows/build.yml`](../.github/workflows/build.yml)).
+
+The build is reproducible: with option A your `SHA256SUMS` match the release's byte for byte,
+so you can check that a downloaded UF2 comes from exactly this source.
 
 ## Option A: container (recommended, any OS with Podman or Docker)
 

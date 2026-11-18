@@ -5,8 +5,10 @@
 Die Firmware besteht aus vial-qmk in einem festen Commit plus dem Keyboard-Ordner und drei
 kleinen Patches aus diesem Repository. `scripts/build.sh` spielt die Patches ein, kopiert das
 Keyboard, baut und schreibt die UF2-Dateien. Jedes Release auf GitHub baut GitHub Actions genau
-so ([`.github/workflows/build.yml`](../.github/workflows/build.yml)); dein Build-Log lässt sich
-also mit dem des Releases vergleichen.
+so ([`.github/workflows/build.yml`](../.github/workflows/build.yml)).
+
+Der Build ist reproduzierbar: Mit Weg A stimmt deine `SHA256SUMS` Byte für Byte mit der des
+Releases überein. So lässt sich prüfen, dass eine heruntergeladene UF2 genau aus diesem Quellcode stammt.
 
 ## Weg A: Container (empfohlen, jedes System mit Podman oder Docker)
 
