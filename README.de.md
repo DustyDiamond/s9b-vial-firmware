@@ -236,9 +236,11 @@ behandeln, vor dem Anvertrauen von Geheimnissen lesen und Probleme melden.
 ## Mitmachen
 
 Issues und Pull Requests sind willkommen, auf **Deutsch oder Englisch** — siehe [CONTRIBUTING.md](CONTRIBUTING.md).
-Niemals Passwörter, Makroinhalte oder `.vil`-Dateien posten. Das Hauptrepository liegt in einer privaten
-GitLab-Instanz und wird nach GitHub gespiegelt; angenommene Pull Requests werden dort übernommen
-und erscheinen hier mit dem nächsten Spiegellauf.
+Niemals Passwörter, Makroinhalte oder `.vil`-Dateien posten.
+
+Entwickelt wird hier auf GitHub: Jede Änderung, auch die des Maintainers, läuft über einen Pull
+Request, den GitHub Actions baut und testet, bevor er gemergt wird. Releases entstehen aus
+Versions-Tags (siehe [docs/BUILDING.de.md](docs/BUILDING.de.md)).
 
 ## Haftungsausschluss
 

@@ -255,9 +255,11 @@ read it before you trust it with secrets, and report problems.
 ## Contributing
 
 Issues and pull requests are welcome, in **English or German** — see [CONTRIBUTING.md](CONTRIBUTING.md).
-Never post passwords, macro contents or `.vil` files. The primary repository is a private GitLab instance that
-mirrors to GitHub; accepted pull requests are applied there and appear here with the next
-mirror run.
+Never post passwords, macro contents or `.vil` files.
+
+Development happens here on GitHub: every change, including the maintainer's own, goes through a
+pull request that GitHub Actions builds and tests before it is merged. Releases are built from
+version tags (see [docs/BUILDING.md](docs/BUILDING.md)).
 
 ## Disclaimer
 
