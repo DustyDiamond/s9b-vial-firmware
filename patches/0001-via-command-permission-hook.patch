@@ -1,0 +1,40 @@
+diff --git a/quantum/via.c b/quantum/via.c
+index 1911c4a5..b2f8a0dd 100644
+--- a/quantum/via.c
++++ b/quantum/via.c
+@@ -201,6 +201,16 @@ __attribute__((weak)) void raw_hid_receive_kb(uint8_t *data, uint8_t length) {
+     *command_id         = id_unhandled;
+ }
+ 
++// numpad-firmware: keyboard may refuse raw HID commands (e.g. while PIN-locked)
++__attribute__((weak)) bool via_command_permitted_kb(uint8_t *data, uint8_t length) {
++    return true;
++}
++
++// numpad-firmware: keyboard may answer a command itself (response written to data)
++__attribute__((weak)) bool via_command_override_kb(uint8_t *data, uint8_t length) {
++    return false;
++}
++
+ // VIA handles received HID messages first, and will route to
+ // raw_hid_receive_kb() for command IDs that are not handled here.
+ // This gives the keyboard code level the ability to handle the command
+@@ -212,6 +222,18 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
+     uint8_t *command_id   = &(data[0]);
+     uint8_t *command_data = &(data[1]);
+ 
++    if (via_command_override_kb(data, length)) {
++        raw_hid_send(data, length);
++        return;
++    }
++
++    if (!via_command_permitted_kb(data, length)) {
++        memset(data, 0, length);
++        *command_id = id_unhandled;
++        raw_hid_send(data, length);
++        return;
++    }
++
+ #ifdef VIAL_ENABLE
+     /* When unlock is in progress, we can only react to a subset of commands */
+     if (vial_unlock_in_progress) {

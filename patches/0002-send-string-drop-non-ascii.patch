@@ -1,0 +1,18 @@
+diff --git a/quantum/send_string/send_string.c b/quantum/send_string/send_string.c
+index 602f24da..9719c965 100644
+--- a/quantum/send_string/send_string.c
++++ b/quantum/send_string/send_string.c
+@@ -221,6 +221,13 @@ void send_char_with_delay(char ascii_code, uint8_t interval) {
+     }
+ #endif
+ 
++    // numpad-firmware: the lookup tables only cover 7-bit ASCII. Bytes >= 0x80
++    // (e.g. UTF-8 of "€" in a Vial text macro) would read past their end and
++    // type random keys, so they are dropped.
++    if ((uint8_t)ascii_code >= 0x80) {
++        return;
++    }
++
+     uint8_t keycode    = pgm_read_byte(&ascii_to_keycode_lut[(uint8_t)ascii_code]);
+     bool    is_shifted = PGM_LOADBIT(ascii_to_shift_lut, (uint8_t)ascii_code);
+     bool    is_altgred = PGM_LOADBIT(ascii_to_altgr_lut, (uint8_t)ascii_code);

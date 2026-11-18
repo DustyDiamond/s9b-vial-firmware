@@ -1,0 +1,19 @@
+diff --git a/util/build_id.py b/util/build_id.py
+index 77e56b59..2f7fa3e0 100644
+--- a/util/build_id.py
++++ b/util/build_id.py
+@@ -1,8 +1,13 @@
++import os
+ import random
+ 
+ 
+ def main():
+-    print("#define BUILD_ID ((uint32_t)0x{:08X})".format(random.randrange(0, 2 ** 24 - 1)))
++    # numpad-firmware: a fixed VIAL_BUILD_ID keeps keymap and macros across
++    # firmware updates (Vial resets the dynamic keymap when the ID changes).
++    fixed = os.environ.get("VIAL_BUILD_ID")
++    value = int(fixed, 0) if fixed else random.randrange(0, 2 ** 24 - 1)
++    print("#define BUILD_ID ((uint32_t)0x{:08X})".format(value))
+ 
+ 
+ if __name__ == "__main__":

@@ -1,0 +1,129 @@
+{
+    "name": "S9B",
+    "lighting": "qmk_rgblight",
+    "matrix": {
+        "rows": 3,
+        "cols": 3
+    },
+    "layouts": {
+        "keymap": [
+            [
+                "0,0",
+                "0,1",
+                "0,2"
+            ],
+            [
+                "1,0",
+                "1,1",
+                "1,2"
+            ],
+            [
+                "2,0",
+                "2,1",
+                "2,2"
+            ]
+        ]
+    },
+    "customKeycodes": [
+        {
+            "name": "DE_EURO",
+            "title": "Euro sign (AltGr+E) for a German host",
+            "shortName": "€"
+        },
+        {
+            "name": "DE_AT",
+            "title": "At sign (AltGr+Q) for a German host",
+            "shortName": "@"
+        },
+        {
+            "name": "DE_LCBR",
+            "title": "Left brace (AltGr+7) for a German host",
+            "shortName": "{"
+        },
+        {
+            "name": "DE_RCBR",
+            "title": "Right brace (AltGr+0) for a German host",
+            "shortName": "}"
+        },
+        {
+            "name": "DE_LBRC",
+            "title": "Left bracket (AltGr+8) for a German host",
+            "shortName": "["
+        },
+        {
+            "name": "DE_RBRC",
+            "title": "Right bracket (AltGr+9) for a German host",
+            "shortName": "]"
+        },
+        {
+            "name": "DE_BSLS",
+            "title": "Backslash (AltGr+ß) for a German host",
+            "shortName": "\\"
+        },
+        {
+            "name": "DE_PIPE",
+            "title": "Pipe (AltGr+<) for a German host",
+            "shortName": "|"
+        },
+        {
+            "name": "DE_TILD",
+            "title": "Tilde (AltGr++) for a German host",
+            "shortName": "~"
+        },
+        {
+            "name": "DE_MICR",
+            "title": "Micro sign (AltGr+M) for a German host",
+            "shortName": "µ"
+        },
+        {
+            "name": "DE_SUP2",
+            "title": "Superscript 2 (AltGr+2) for a German host",
+            "shortName": "²"
+        },
+        {
+            "name": "DE_SUP3",
+            "title": "Superscript 3 (AltGr+3) for a German host",
+            "shortName": "³"
+        },
+        {
+            "name": "DE_SECT",
+            "title": "Section sign (Shift+3) for a German host",
+            "shortName": "§"
+        },
+        {
+            "name": "DE_DEG",
+            "title": "Degree sign (Shift+^) for a German host",
+            "shortName": "°"
+        },
+        {
+            "name": "DE_ACUT",
+            "title": "Acute accent (dead key + space) for a German host",
+            "shortName": "´"
+        },
+        {
+            "name": "DE_GRV",
+            "title": "Grave accent (dead key + space) for a German host",
+            "shortName": "`"
+        },
+        {
+            "name": "DE_CIRC",
+            "title": "Circumflex (dead key + space) for a German host",
+            "shortName": "^"
+        },
+        {
+            "name": "DE_ADIA_UP",
+            "title": "Capital A umlaut for a German host",
+            "shortName": "Ä"
+        },
+        {
+            "name": "DE_ODIA_UP",
+            "title": "Capital O umlaut for a German host",
+            "shortName": "Ö"
+        },
+        {
+            "name": "DE_UDIA_UP",
+            "title": "Capital U umlaut for a German host",
+            "shortName": "Ü"
+        }
+    ]
+}
