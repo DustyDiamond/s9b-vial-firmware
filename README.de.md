@@ -235,7 +235,8 @@ behandeln, vor dem Anvertrauen von Geheimnissen lesen und Probleme melden.
 
 ## Mitmachen
 
-Issues und Pull Requests sind willkommen. Das Hauptrepository liegt in einer privaten
+Issues und Pull Requests sind willkommen, auf **Deutsch oder Englisch** — siehe [CONTRIBUTING.md](CONTRIBUTING.md).
+Niemals Passwörter, Makroinhalte oder `.vil`-Dateien posten. Das Hauptrepository liegt in einer privaten
 GitLab-Instanz und wird nach GitHub gespiegelt; angenommene Pull Requests werden dort übernommen
 und erscheinen hier mit dem nächsten Spiegellauf.
 

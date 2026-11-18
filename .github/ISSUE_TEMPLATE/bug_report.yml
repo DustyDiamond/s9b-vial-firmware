@@ -1,0 +1,54 @@
+name: Bug report / Fehlerbericht
+description: Something does not work as described / Etwas funktioniert nicht wie beschrieben
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please write in English or German. / Bitte auf Deutsch oder Englisch schreiben.**
+        Issues in other languages may be closed.
+
+        ⚠️ **Never post passwords, macro contents, `.vil` files or `CURRENT.UF2` backups.**
+        They contain your macros in plain text.
+        **Niemals Passwörter, Makroinhalte, `.vil`-Dateien oder `CURRENT.UF2`-Sicherungen posten.**
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version / Firmware-Version
+      placeholder: v1.0.0
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Device and USB ID / Gerät und USB-ID
+      description: As shown by Vial / Device Manager (e.g. "S9B", A286:1DAD) / Wie in Vial bzw. Geräte-Manager angezeigt
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: PC OS, keyboard layout, Vial version / Betriebssystem, Tastaturbelegung, Vial-Version
+      placeholder: Windows 11, German (QWERTZ), Vial 0.7.5
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, what did you expect? / Was ist passiert, was hast du erwartet?
+      description: Use dummy text like `Aa1!Zz@{[]}\~|^` when it is about typed characters. / Bei Zeichenfehlern einen Dummy-Text wie `Aa1!Zz@{[]}\~|^` verwenden.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Schritte zum Nachstellen
+    validations:
+      required: false
+  - type: checkboxes
+    id: secrets
+    attributes:
+      label: Check / Prüfung
+      options:
+        - label: This issue contains no passwords or real macro contents. / Dieses Issue enthält keine Passwörter oder echten Makroinhalte.
+          required: true

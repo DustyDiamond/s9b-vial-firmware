@@ -254,7 +254,8 @@ read it before you trust it with secrets, and report problems.
 
 ## Contributing
 
-Issues and pull requests are welcome. The primary repository is a private GitLab instance that
+Issues and pull requests are welcome, in **English or German** — see [CONTRIBUTING.md](CONTRIBUTING.md).
+Never post passwords, macro contents or `.vil` files. The primary repository is a private GitLab instance that
 mirrors to GitHub; accepted pull requests are applied there and appear here with the next
 mirror run.
 

@@ -1,0 +1,21 @@
+name: Feature request / Funktionswunsch
+description: Suggest an idea / Eine Idee vorschlagen
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please write in English or German. / Bitte auf Deutsch oder Englisch schreiben.**
+        Issues in other languages may be closed.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like, and why? / Was wünschst du dir, und wofür?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered / Erwogene Alternativen
+    validations:
+      required: false

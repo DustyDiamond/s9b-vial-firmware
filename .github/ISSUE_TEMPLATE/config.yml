@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vial usage questions / Fragen zu Vial allgemein
+    url: https://get.vial.today/manual/
+    about: General Vial help (not specific to this firmware) / Allgemeine Vial-Hilfe
