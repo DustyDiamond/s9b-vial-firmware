@@ -62,7 +62,7 @@ Das Ergebnis liegt in `out/` (mit Docker gehört es root).
 | Datei | Zweck |
 |-------|-------|
 | `s9b-first-install.uf2` | Firmware plus Löschen des Einstellungsbereichs (`0x0801E000`–`0x0801FFFF`). Beim Wechsel von der Herstellerfirmware oder für einen sauberen Neustart. |
-| `s9b-update.uf2` | Nur die Firmware. Belegung, Makros und PIN bleiben. |
+| `s9b-update.uf2` | Nur die Firmware. Soll Belegung, Makros und PIN behalten; trotzdem vor dem Flashen die Belegung in Vial sichern (*File → Save current layout*). |
 | `SHA256SUMS` | Prüfsummen beider UF2-Dateien. |
 | `s9b.elf`, `s9b-app.bin` | Zum Debuggen / Flashen per SWD (`s9b-app.bin` gehört nach `0x08004000`). |
 

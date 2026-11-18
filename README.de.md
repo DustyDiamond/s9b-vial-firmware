@@ -24,6 +24,11 @@ mit **deutscher Tastaturbelegung**. Sie ersetzt die Herstellerfirmware und bring
 > Das Flashen eigener Firmware geschieht auf eigene Gefahr und kann Makros löschen oder das Pad
 > unbrauchbar machen. Vorher den [Haftungsausschluss](#haftungsausschluss) lesen und **die
 > Sicherung aus Schritt 3 unten** anlegen.
+>
+> **Vor jedem Flashen, auch vor Updates:** die Belegung in Vial mit *File → Save current layout*
+> sichern (eine `.vil`-Datei, JSON). `s9b-update.uf2` soll Belegung und Makros zwar behalten, aber
+> nur mit Sicherung bekommst du sie zurück, falls doch etwas schiefgeht. Die Datei enthält die
+> Makros im Klartext, also wie ein Passwort aufbewahren.
 
 ---
 
@@ -60,11 +65,14 @@ Du brauchst [Vial](https://get.vial.today/) ab 0.7.5 und einen PC (Windows, macO
 ## Update
 
 1. Pad entsperren (falls gesperrt).
-2. Die mit **Reset** / `QK_BOOT` belegte Taste drücken (einmal in Vial belegen, z. B. auf einer
+2. **Belegung sichern:** Vial → *File → Save current layout* (`.vil`, JSON mit Belegung, Makros und
+   Einstellungen). Vor jedem Update, auch wenn `s9b-update.uf2` alles behalten sollte.
+   Zurückspielen: *File → Load saved layout*.
+3. Die mit **Reset** / `QK_BOOT` belegte Taste drücken (einmal in Vial belegen, z. B. auf einer
    höheren Ebene) oder die Notfall-Kombination nutzen (löscht alles, siehe unten).
-3. **`s9b-update.uf2`** auf das Laufwerk `YRKB_UPDATE` kopieren.
+4. **`s9b-update.uf2`** auf das Laufwerk `YRKB_UPDATE` kopieren.
 
-Belegung, Makros und PIN bleiben erhalten, außer das [Changelog](CHANGELOG.md) sagt etwas anderes.
+Belegung, Makros und PIN sollten erhalten bleiben, außer das [Changelog](CHANGELOG.md) sagt etwas anderes.
 
 ## Zurück zur Herstellerfirmware
 

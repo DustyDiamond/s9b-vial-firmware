@@ -62,7 +62,7 @@ The result is in `out/` (owned by root when using Docker).
 | File | Purpose |
 |------|---------|
 | `s9b-first-install.uf2` | Firmware plus an erase of the settings area (`0x0801E000`–`0x0801FFFF`). Use when coming from the vendor firmware or to start clean. |
-| `s9b-update.uf2` | Firmware only. Keeps keymap, macros and PIN. |
+| `s9b-update.uf2` | Firmware only. Meant to keep keymap, macros and PIN; still save the layout in Vial (*File → Save current layout*) before flashing. |
 | `SHA256SUMS` | Checksums of both UF2 files. |
 | `s9b.elf`, `s9b-app.bin` | For debugging / SWD flashing (`s9b-app.bin` goes to `0x08004000`). |
 

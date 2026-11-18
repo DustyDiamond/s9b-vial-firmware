@@ -23,6 +23,11 @@ Open-source [Vial](https://get.vial.today/)/[QMK](https://qmk.fm/) firmware for 
 > [!WARNING]
 > Flashing custom firmware is at your own risk and can erase your macros or leave the pad
 > unusable. Read the [disclaimer](#disclaimer) and **make the backup in step 3 below** first.
+>
+> **Before every flash, including updates:** save your layout in Vial with
+> *File → Save current layout* (a `.vil` file, JSON). `s9b-update.uf2` is meant to keep keymap
+> and macros, but a backup is the only way to get them back if something goes wrong. The file
+> contains your macros in plain text, so store it like a password.
 
 ---
 
@@ -60,11 +65,14 @@ You need [Vial](https://get.vial.today/) 0.7.5 or newer and a PC (Windows, macOS
 ## Update
 
 1. Unlock the pad (if locked).
-2. Press the key mapped to **Reset** / `QK_BOOT` (map it once in Vial, e.g. on a higher layer),
+2. **Back up your layout:** Vial → *File → Save current layout* (`.vil`, JSON with keymap, macros
+   and settings). Do this before every update, even though `s9b-update.uf2` should keep
+   everything. To restore: *File → Load saved layout*.
+3. Press the key mapped to **Reset** / `QK_BOOT` (map it once in Vial, e.g. on a higher layer),
    or use the emergency combination (erases everything, see below).
-3. Copy **`s9b-update.uf2`** onto the `YRKB_UPDATE` drive.
+4. Copy **`s9b-update.uf2`** onto the `YRKB_UPDATE` drive.
 
-Keymap, macros and PIN are kept unless the [changelog](CHANGELOG.md) says otherwise.
+Keymap, macros and PIN should be kept unless the [changelog](CHANGELOG.md) says otherwise.
 
 ## Back to the vendor firmware
 

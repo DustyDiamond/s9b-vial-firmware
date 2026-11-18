@@ -73,6 +73,9 @@ jobs:
             echo "**Which file?** \`s9b-first-install.uf2\` when coming from the vendor firmware,"
             echo "\`s9b-update.uf2\` for updates. Read the [README](https://github.com/${GITHUB_REPOSITORY}#readme) first."
             echo
+            echo "**Before flashing, always save your layout in Vial** (*File → Save current layout*, a \`.vil\` JSON file),"
+            echo "even for \`s9b-update.uf2\`, which is meant to keep keymap and macros."
+            echo
             echo "Built by GitHub Actions from \`${GITHUB_SHA}\` (vial-qmk \`$(cat vial-qmk.ref)\`)."
             echo
             echo '```'
