@@ -16,6 +16,10 @@ private channel. / Issue ohne Details zum Angriff anlegen und nach einem private
 
 ## Pull requests
 
+Open pull requests against `main`. GitHub Actions must build them green before merging
+(squash or rebase, linear history). / Pull Requests gegen `main`; vor dem Merge muss der Build
+von GitHub Actions grün sein.
+
 1. Build and test as in [docs/BUILDING.md](docs/BUILDING.md): `tests/run.sh`, `scripts/build.sh`.
 2. Changed the EEPROM layout (layers, macros, tap dances, Vial features, QMK settings)? Bump
    [`eeprom-layout.id`](eeprom-layout.id) and say so in [`CHANGELOG.md`](CHANGELOG.md).

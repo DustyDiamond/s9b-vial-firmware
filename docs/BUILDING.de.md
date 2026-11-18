@@ -106,3 +106,10 @@ Layouts dem Keyboard zu.
 3. In den Changelogs von vial-qmk und QMK nach Änderungen am EEPROM-Layout sehen und bei Bedarf
    `eeprom-layout.id` erhöhen.
 4. Am Gerät testen: Textausgabe, LEDs, Sperren/Entsperren, Update behält die Belegung.
+
+## Release erstellen (Maintainer)
+
+1. Änderungen per Pull Request mergen; in `CHANGELOG.md` einen Abschnitt `## [X.Y.Z]` anlegen.
+2. Den gemergten Commit auf `main` taggen und das Tag pushen: `git tag -a vX.Y.Z -m "S9B Vial firmware X.Y.Z" && git push origin vX.Y.Z`.
+3. GitHub Actions baut und veröffentlicht das Release mit dem Changelog-Abschnitt als Text. Fehlt
+   der Abschnitt, bricht der Release-Schritt bewusst ab.
